@@ -42,6 +42,7 @@ class ViewController: UIViewController {
     //MARK:- IBActions
     @IBAction func onClickLoad(_ sender: Any) {
         StepsHelper.shared.startLoader(view: self.view)
+        self.canceledLoad = false
         self.webservice.fetchComments(firstNum: self.firstNum, lastNum: self.lastNum, page: 1)
     }
     
